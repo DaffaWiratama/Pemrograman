@@ -1,17 +1,20 @@
 #include <iostream>
 using namespace std;
 
-char satuan;
-double suhu, F, C, K;
+char kodesatuan;
+double nilaisuhu, F, C, K;
 float SELISIH_KELVIN=273.15;
 
 int main(){
     cout<<"KONVERSI DAN KATEGORI SUHU HARIAN"<<endl;
-    cout<<"Suhu saat ini "<<suhu<<"derajat celsius"<<endl;
     
+    cout<<"Masukkan nilai suhu: "<<endl;
+    cin>>nilaisuhu;
     cout<<"Anda ingin melihat data dalam satuan apa? (C/F/K)"<<endl;
-    cin>>(satuan);
-    switch(satuan){
+    cin>>satuan;
+
+    kodesatuan = (kodesatuan >= 'a' && kodesatuan <= 'z') ? kodesatuan - ('a' - 'A') : kodesatuan;
+    switch kodesatuan {
         case 'C':
             cout<<"Suhu dalam derajat Celsius: "<<suhu<<endl;
         case 'F':
