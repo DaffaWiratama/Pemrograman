@@ -11,33 +11,34 @@ int main(){
     cout<<"Masukkan nilai suhu: "<<endl;
     cin>>nilaisuhu;
     cout<<"Apa kode satuan suhu yang anda pakai? (C/F/K) "<<endl;
-    cin>>satuan;
+    cin>>kodesatuan;
 
     kodesatuan = (kodesatuan >= 'a' && kodesatuan <= 'z') ? kodesatuan - ('a' - 'A') : kodesatuan;
-    switch kodesatuan {
+    switch (kodesatuan) {
         case 'C':
             C=nilaisuhu;
             if (C<(-273.15)){
                 cout<<"ERR: SUHU TIDAK MUNGKIN"<<endl;
                 return 0;
             }
-            
+            break;
         case 'F':
             C=(nilaisuhu-32)*5/9.0;
             if (C<(-273.15)){
                 cout<<"ERR: SUHU TIDAK MUNGKIN"<<endl;
                 return 0;
             }
-            
+            break;
         case 'K':
             C=nilaisuhu-SELISIH_KELVIN;
             if (C<(-273.15)){
                 cout<<"ERR: SUHU TIDAK MUNGKIN"<<endl;
                 return 0;
             }
-            
+            break;
         default:
             cout<<"ERR: KODE SATUAN TIDAK DIKENAL";
+            return 0;
     }
 
     cout<<"Suhu dalam derajat Celsius: "<<C<<endl;
@@ -55,7 +56,6 @@ int main(){
     } else if (C>=32){
         cout<<"Kategori suhu: PANAS"<<endl;
     }
-    break;
 
-    C<=0?cout<<"AIR MEMBEKU":cout<<"AIR TIDAK MEMBEKU"
+    C<=0?cout<<"AIR MEMBEKU":cout<<"AIR TIDAK MEMBEKU";
 }
