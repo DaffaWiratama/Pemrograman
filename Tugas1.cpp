@@ -63,5 +63,45 @@ int main(){
         cout<<"Kategori suhu: PANAS"<<endl;
     }
 
-    C<=0?cout<<"AIR MEMBEKU":cout<<"AIR TIDAK MEMBEKU"
+    C<=0?cout<<"AIR MEMBEKU":cout<<"AIR TIDAK MEMBEKU";
 }
+
+/*
+    Penjelasan
+    1. Alur program:
+       - Meminta pengguna untuk memasukkan nilai suhu dan kode satuan
+       - Melakukan konversi suhu berdasarkan kode satuan yang dimasukkan
+       - Menampilkan suhu dalam tiga satuan: Celsius, Fahrenheit, dan Kelvin
+       - Menentukan kategori suhu berdasarkan nilai Celsius
+       - Menampilkan apakah air membeku atau tidak berdasarkan nilai Celsius
+    2. Variabel:
+       - nilaisuhu: menyimpan nilai suhu yang dimasukkan pengguna
+       - kodesatuan: menyimpan kode satuan suhu yang dimasukkan pengguna
+       - C, F, K: menyimpan nilai suhu dalam Celsius, Fahrenheit, dan Kelvin
+       - SELISIH_KELVIN: konstanta untuk konversi Kelvin ke Celsius
+    3. Percabangan:
+       - Menggunakan switch-case untuk menentukan konversi suhu berdasarkan kode satuan
+       - Menggunakan if-else untuk menentukan kategori suhu dan apakah air membeku atau tidak
+    4. Contoh eksekusi:
+       - Input: 89.2 F
+         Output: 
+         Suhu dalam derajat Celsius: 31.7778
+         Suhu dalam derajat Fahrenheit: 89.2
+         Suhu dalam Kelvin: 304.928
+         Kategori suhu: HANGAT
+         AIR TIDAK MEMBEKU
+       - Input: -300 K
+         Output:
+         ERR: SUHU TIDAK MUNGKIN
+       - Input: 25 X
+         Output:
+         ERR: KODE SATUAN TIDAK DIKENAL
+    5. Catatan:
+       - Saya awalnya membuat program jauh jauh lebih panjang dari ini karena memasukkan
+         fungsi konversi nilai suhu menjadi celsius pada setiap switch case, juga memasukkan  
+         pengecekan kondisional di dalam switch-case
+       - Saya memutuskan untuk memindahkan kondisional ke luar switch-case.
+       - Saya awalnya mengalami kebingungan ketika ingin menggunakan global variable
+       - Saya juga mengalami kebingungan ketika membuat struktur atau urutan untuk 
+         melakukan konversi nilai suhu kedalam celsius
+*/
